@@ -1,7 +1,13 @@
 const Nav = () => {
   return (
     <>
-      <div>I am Nav</div>
+      <ul>
+        <li>Home</li>
+        <li>Projects</li>
+        <li>Info</li>
+        <li>Contact</li>
+        <li>FAQ</li>
+      </ul>
     </>
   );
 };
