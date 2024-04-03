@@ -14,7 +14,9 @@ const Welcome = () => {
   return (
     <>
       {isWelcomeActive ? (
-        <div className="welcomeContainer">I am Welcome</div>
+        <div className="welcomeContainer">
+          <h1 className="welcomeText">Man Sang Sin Portfolio</h1>
+        </div>
       ) : (
         <></>
       )}
