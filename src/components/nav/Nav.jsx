@@ -1,12 +1,25 @@
 const Nav = () => {
+  function handleClick() {
+    alert(event.target.id);
+  }
   return (
     <>
       <ul>
-        <li>Home</li>
-        <li>Projects</li>
-        <li>Info</li>
-        <li>Contact</li>
-        <li>FAQ</li>
+        <li onClick={handleClick} id="Home">
+          Home
+        </li>
+        <li onClick={handleClick} id="Projects">
+          Projects
+        </li>
+        <li onClick={handleClick} id="Info">
+          Info
+        </li>
+        <li onClick={handleClick} id="Contact">
+          Contact
+        </li>
+        <li onClick={handleClick} id="Faq">
+          FAQ
+        </li>
       </ul>
     </>
   );
