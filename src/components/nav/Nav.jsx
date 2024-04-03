@@ -1,6 +1,6 @@
-const Nav = () => {
+const Nav = ({ setActiveSection }) => {
   function handleClick() {
-    alert(event.target.id);
+    setActiveSection(event.target.id);
   }
   return (
     <>
