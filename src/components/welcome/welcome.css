@@ -4,4 +4,15 @@
   top: 0;
   width: 100%;
   height: 100%;
+  animation: welcomeTransition 3s;
+}
+
+@keyframes welcomeTransition {
+  0% {
+    visibility: visible;
+    background-color: red;
+  }
+  100% {
+    visibility: hidden;
+  }
 }
