@@ -11,11 +11,11 @@ import Nav from "./components/nav/Nav";
 import Projects from "./components/projects/Projects";
 
 function App() {
-  const [activeSection, SetActiveSection] = useState("Home");
+  const [activeSection, setActiveSection] = useState("Home");
   return (
     <>
       <Header />
-      <Nav />
+      <Nav setActiveSection={setActiveSection} />
       {activeSection === "Home" ? <Home /> : <></>}
       {activeSection === "Projects" ? <Projects /> : <></>}
       {activeSection === "Info" ? <Info /> : <></>}
