@@ -1,3 +1,4 @@
+import { useState } from "react";
 import "./App.css";
 import About from "./components/about/About";
 import Contact from "./components/contact/Contact";
@@ -10,15 +11,16 @@ import Nav from "./components/nav/Nav";
 import Projects from "./components/projects/Projects";
 
 function App() {
+  const [activeSection, SetActiveSection] = useState("Home");
   return (
     <>
       <Header />
       <Nav />
-      <Home />
-      <Projects />
-      <Info />
-      <Contact />
-      <Faq />
+      {activeSection === "Home" ? <Home /> : <></>}
+      {activeSection === "Projects" ? <Projects /> : <></>}
+      {activeSection === "Info" ? <Info /> : <></>}
+      {activeSection === "Contact" ? <Contact /> : <></>}
+      {activeSection === "Faq" ? <Faq /> : <></>}
       <About />
       <Footer />
     </>
