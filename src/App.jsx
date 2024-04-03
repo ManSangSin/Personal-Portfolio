@@ -9,6 +9,7 @@ import Home from "./components/home/Home";
 import Info from "./components/info/Info";
 import Nav from "./components/nav/Nav";
 import Projects from "./components/projects/Projects";
+import Welcome from "./components/welcome/Welcome";
 
 function App() {
   const [activeSection, setActiveSection] = useState("Home");
@@ -16,6 +17,7 @@ function App() {
     <>
       <Header />
       <Nav setActiveSection={setActiveSection} />
+      <Welcome />
       {activeSection === "Home" ? <Home /> : <></>}
       {activeSection === "Projects" ? <Projects /> : <></>}
       {activeSection === "Info" ? <Info /> : <></>}
