@@ -6,13 +6,27 @@
   height: 100%;
   animation: welcomeTransition 3s;
   display: flex;
+  flex-direction: column;
   align-items: center;
+  justify-content: center;
 }
 
 @keyframes welcomeTransition {
   0% {
     visibility: visible;
-    background-color: red;
+    background-color: paleturquoise;
+  }
+  20% {
+    visibility: visible;
+    background-color: palegoldenrod;
+  }
+  40% {
+    visibility: visible;
+    background-color: palevioletred;
+  }
+  60% {
+    visibility: visible;
+    background-color: palegreen;
   }
   100% {
     visibility: hidden;
@@ -20,6 +34,4 @@
 }
 
 .welcomeText {
-  margin-left: auto;
-  margin-right: auto;
 }
