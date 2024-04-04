@@ -1,5 +1,7 @@
+import { useEffect } from "react";
+
 const HelloMessage = () => {
-  const differentWaysToSayHello = [
+  const helloInDifferentLanguanges = [
     "Hello",
     "Hola",
     "Здравствуйте",
@@ -36,13 +38,17 @@ const HelloMessage = () => {
     "Chào chị",
   ];
 
-  const randomGreeting =
-    differentWaysToSayHello[
-      Math.floor(Math.random() * differentWaysToSayHello.length)
+  const greetingSelection = ["Hello", ":)"];
+
+  function randomGreeting() {
+    return helloInDifferentLanguanges[
+      Math.floor(Math.random() * helloInDifferentLanguanges.length)
     ];
+  }
+
   return (
     <>
-      <div>{randomGreeting}</div>
+      <div>{greetingSelection}</div>
     </>
   );
 };
