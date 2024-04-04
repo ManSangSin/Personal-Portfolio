@@ -1,3 +1,4 @@
+import { useState } from "react";
 import { useEffect } from "react";
 
 const HelloMessage = () => {
@@ -54,9 +55,23 @@ const HelloMessage = () => {
 
   generateArrayOfRandomGreetings();
 
+  const [currentIndex, setCurrentIndex] = useState(0);
+
+  useEffect(() => {
+    if (currentIndex === greetingSelection.length - 1) {
+      return;
+    }
+    const interval = setInterval(() => {
+      const updatedData = currentIndex + 1;
+      setCurrentIndex(updatedData);
+    }, 200);
+
+    return () => clearInterval(interval);
+  }, [currentIndex]);
+
   return (
     <>
-      <div>{greetingSelection}</div>
+      <div>{greetingSelection[currentIndex]}</div>
     </>
   );
 };
