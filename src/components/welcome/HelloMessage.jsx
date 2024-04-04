@@ -49,7 +49,10 @@ const HelloMessage = () => {
 
   function generateArrayOfRandomGreetings() {
     while (greetingSelection.length < 10) {
-      greetingSelection.splice(1, 0, randomGreeting());
+      const greeting = randomGreeting();
+      if (!greetingSelection.includes(greeting)) {
+        greetingSelection.splice(1, 0, greeting);
+      }
     }
   }
 
