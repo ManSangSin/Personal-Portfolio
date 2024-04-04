@@ -46,6 +46,14 @@ const HelloMessage = () => {
     ];
   }
 
+  function generateArrayOfRandomGreetings() {
+    while (greetingSelection.length < 10) {
+      greetingSelection.splice(1, 0, randomGreeting());
+    }
+  }
+
+  generateArrayOfRandomGreetings();
+
   return (
     <>
       <div>{greetingSelection}</div>
