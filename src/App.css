@@ -1,0 +1,16 @@
+.allSections {
+  animation: allSectionsTransition 0.7s;
+}
+
+@keyframes allSectionsTransition {
+  0% {
+    visibility: hidden;
+    opacity: 0;
+    transform: translateY(2rem);
+  }
+
+  100% {
+    visibility: visible;
+    opacity: 1;
+  }
+}
