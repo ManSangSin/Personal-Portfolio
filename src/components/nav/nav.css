@@ -6,3 +6,8 @@
 .navListItem {
   cursor: pointer;
 }
+
+.navListItem:hover {
+  color: rgb(168, 168, 168);
+  transition-duration: 0.7s;
+}
