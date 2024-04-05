@@ -28,7 +28,10 @@ function App() {
       {showAll ? (
         <main className="allSections">
           <Header />
-          <Nav setActiveSection={setActiveSection} />
+          <Nav
+            activeSection={activeSection}
+            setActiveSection={setActiveSection}
+          />
           {activeSection === "Home" ? <Home /> : <></>}
           {activeSection === "Projects" ? <Projects /> : <></>}
           {activeSection === "Info" ? <Info /> : <></>}
