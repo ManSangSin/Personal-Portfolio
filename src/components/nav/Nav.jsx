@@ -1,6 +1,6 @@
 import "./nav.css";
 
-const Nav = ({ setActiveSection }) => {
+const Nav = ({ activeSection, setActiveSection }) => {
   function handleClick() {
     setActiveSection(event.target.id);
   }
@@ -8,19 +8,19 @@ const Nav = ({ setActiveSection }) => {
     <>
       <ul className="navUnorderedList">
         <li onClick={handleClick} id="Home" className="navListItem">
-          Home
+          {activeSection === "Home" ? "○" : "Home"}
         </li>
         <li onClick={handleClick} id="Projects" className="navListItem">
-          Projects
+          {activeSection === "Projects" ? "○" : "Projects"}
         </li>
         <li onClick={handleClick} id="Info" className="navListItem">
-          Info
+          {activeSection === "Info" ? "○" : "Info"}
         </li>
         <li onClick={handleClick} id="Contact" className="navListItem">
-          Contact
+          {activeSection === "Contact" ? "○" : "Contact"}
         </li>
         <li onClick={handleClick} id="Faq" className="navListItem">
-          FAQ
+          {activeSection === "Faq" ? "○" : "Faq"}
         </li>
       </ul>
     </>
